@@ -1,0 +1,22 @@
+<!-- shopping list using angular js-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+ <body>
+    <div ng-app="" ng-init="items=['apple','banana','chocolate']">
+        <p>SHOPPING LIST</p>
+        <input type="text"  ng-model="items" placeholder="add an item">
+        <ul>
+            <li ng-repeat="x in items">
+                {{x}}
+            </li>
+        </ul>
+    </div>
+    
+ </body>
+ </html>
