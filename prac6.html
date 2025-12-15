@@ -1,0 +1,53 @@
+<!-- simple calculator-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <label >enter number: </label>
+    <input type="text" id="num1" placeholder="number">
+    <br>
+    <br>
+
+    <label >enter another number: </label>
+    <input type="text" id="num2" placeholder="another number">
+    <br>
+    <br>
+<div id = "res"></div>
+
+    <button onclick="add()">+</button>
+     <button onclick="mul()">*</button>
+      <button onclick="divide()">/</button>
+       <button onclick="sub()">-</button>
+       
+
+       <script>
+        function add(){
+            let a = Number(document.getElementById("num1").value);
+            let b  = Number(document.getElementById("num2").value);
+            document.getElementById("res").innerText=a+b;
+            }
+
+        function mul(){
+            let c = Number(document.getElementById("num1").value);
+            let d  = Number(document.getElementById("num2").value);
+            document.getElementById("res").innerText=c*d;
+            }
+        
+        function divide(){
+            let e = Number(document.getElementById("num1").value);
+            let f  = Number(document.getElementById("num2").value);
+            document.getElementById("res").innerText=e/f;
+            }
+        
+        function sub(){
+            let g = Number(document.getElementById("num1").value);
+            let h  = Number(document.getElementById("num2").value);
+            document.getElementById("res").innerText=g-h;
+            }
+       </script>
+ </body>
+ </html>

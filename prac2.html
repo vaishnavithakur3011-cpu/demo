@@ -1,0 +1,30 @@
+<!-- multiplication and division using user input-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&D</title>
+ </head>
+ <body>
+   <div>num1: </div>
+   <input type="text" id="demo1" placeholder="enter">
+    <div>num2: </div>
+    <input type="text" id="demo2" placeholder="enter">
+    <button onclick = "mul()">multiply</button>
+     <button onclick = "div()">divide</button>
+     <div id="res"></div>
+    <script>
+        function mul(){
+            let a = Number(document.getElementById("demo1").value);
+            let b =  Number(document.getElementById("demo2").value);
+            document.getElementById("res").innerText=a*b;
+        }
+        function div(){
+            let a = Number(document.getElementById("demo1").value);
+            let b =  Number(document.getElementById("demo2").value);
+            document.getElementById("res").innerText=a/b;
+        }
+    </script>
+ </body>
+ </html>

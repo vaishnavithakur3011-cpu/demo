@@ -1,0 +1,28 @@
+<!--convert temp-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>enter temp: </div>
+    <input type="text" id="demo1" placeholder="enter">
+    <button onclick="convertf()">farenheit</button>
+    <button onclick="convertc()">celsius</button>
+    <div id="res"></div>
+
+    <script>
+        function convertf(){
+            let t = Number(document.getElementById("demo1").value);
+            document.getElementById("res").innerText= (9*t)/5 + 32;
+        }
+        function convertc(){
+            let t = Number(document.getElementById("demo1").value);
+            document.getElementById("res").innerText= 5*(t-32)/9;
+        }
+
+    </script>
+</body>
+</html>

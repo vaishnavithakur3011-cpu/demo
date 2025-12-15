@@ -1,0 +1,22 @@
+<!-- directive ex1 ang js -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <body ng-app="task">
+    <display-smth></display-smth>
+    <script>
+        var app = angular.module("task",[]);
+        app.directive("displaySmth",function(){
+            return{
+                template: "<h2> hello world</h2>"
+            };
+        });
+    </script>
+    
+ </body>
+ </html>

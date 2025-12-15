@@ -1,0 +1,25 @@
+<!-- ajax filters ex1-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+ <body>
+    <div ng-app="" ng-init="items=[{veg:'potato',imp:'usa'},{veg:'tomato',imp:'japan'},{veg:'onion',imp:'spain'}]">
+        <p>Looping with objects</p>
+        <ul>
+            <li ng-repeat="x in items|orderBy:'imp'">
+                {{x.veg + ',' +x.imp}}
+            </li>
+        </ul>
+        
+
+
+    </div>
+    
+    
+ </body>
+ </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>enter: </label>
+    <input type="text" id="num" placeholder="enter here">
+    <button onclick="compute()">compute</button>
+    <div id="result"></div>
+
+    <script>
+        function compute(){
+            let a = Number(document.getElementById("num").value);
+            
+            let lastDigit = a % 10;
+      let remaining = Math.floor(a / 10);
+
+      let output = lastDigit ** remaining;
+
+      document.getElementById("result").innerText = `${lastDigit} ^ ${remaining} = ${output}`;
+
+            }
+
+        
+    </script>
+</body>
+</html>

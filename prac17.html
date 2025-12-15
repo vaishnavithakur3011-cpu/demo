@@ -1,0 +1,91 @@
+<!--angular js form ex-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+    <div ng-app="" ng-init="fn='john';sn='doe'">
+        <form>
+
+        <p>Enter your name: <input type="text" ng-model="fn">    </p>
+        {{fn}} is your firstname
+        <p>Enter your surname:   <input type="text" ng-model="sn"> </p>
+        
+        <br>
+        {{fn + ''+sn}} is your name.
+        <br>
+
+        <div ng-app="" ng-init="age=1" ng-required="true">
+            <p>Enter your age: <input type="text" ng-model="age"></p>
+             <p>Are you 18+?</p>  
+            <p>yes  <input type="checkbox" ng-model="var1">  </p>
+            <p>no  <input type="checkbox" ng-model="var2"> </p>
+            <p ng-show="age>=18 && var1">You are 18+ for sure ofc obviously</p>
+            <p ng-show="age!=18 && var2">You are less than 18 </p>
+         
+        </div>
+        <br>
+
+        <div ng-app="" ng-init="topic">
+            pick a topic
+            <input type="radio" ng-model="topic" value="science">science
+            <input type="radio" ng-model="topic" value="computer science">computer science
+            <input type="radio" ng-model="topic" value="maths">maths
+            <input type="radio" ng-model="topic" value="eng">eng
+
+            <div ng-switch = "topic">
+                <div ng-switch-when="science">
+                    You chose science!
+                </div>
+                <div ng-switch-when = "computer science">
+                    You chose computer science!
+                </div>
+                <div ng-switch-when="maths">
+                    You chose maths!
+                </div>
+                <div ng-switch-when="eng">
+                    You chose eng!
+                </div>
+
+            </div ng-switch>
+        </div>
+        <br>
+
+        <div ng-app="" ng-init="hobby">
+            Pick a hobby:
+            <select ng-model="hobby">
+                <option value="singing">singing</option>
+                <option value="dancing">dancing</option>
+                <option value="acting">acting</option>
+                <option value="painting">painting</option>
+            </select>
+            <div ng-switch="hobby">
+                <div ng-switch-when="singing">
+                    you like singing
+                </div>
+                <div ng-switch-when="dancing">
+                    you like dancing
+                </div>
+                <div ng-switch-when="acting">
+                    you like acting
+                </div>
+                <div ng-switch-when="painting">
+                    you like painting
+                </div>
+            </div>
+        </div>
+        <button type="submit">submit
+            
+        </button>
+      
+    </form>
+        
+        
+    </div>
+    
+</body>
+</html>

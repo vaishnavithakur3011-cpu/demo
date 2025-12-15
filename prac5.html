@@ -1,0 +1,104 @@
+<!-- student registration form-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration form</title>
+ </head>
+ <form name="student" onsubmit="validateform()" method="post">
+ <body>
+    <label>firstname: </label>
+    <input type="text" id="fnm" placeholder="enter firstname">
+    <br>
+    <br>
+
+    <label>surname: </label>
+    <input type="text" id="snm" placeholder="enter surname">
+    <br>
+    <br>
+
+    <label>Phone number: </label>
+    <input type="text" id="pnm" placeholder="enter number">
+    <br>
+    <br>
+
+    <label>birthdate: </label>
+    <input type="date" id="bd" placeholder="DD/MM/YYYY">
+    <br>
+    <br>
+
+    <label>age: </label>
+    <input type="text" id="a" placeholder="enter age">
+    <br>
+    <br>
+
+    <label>Gender: </label>
+    <input type="radio"  name="gender" value="female">female
+    <input type="radio"  name="gender" value ="male">male
+    <br>
+    <br>
+
+    <label>address: </label>
+    <textarea name="enter address" rows="7" cols="30"></textarea>
+    <br>
+    <br>
+
+    <label>hobbies: </label>
+    <br>
+    <input type="checkbox" name="hobbies" value="singing">singing
+    <br>
+    <br>
+    <input type="checkbox" name="hobbies" value="dance">dance
+    <br>
+    <br>
+    <input type="checkbox" name="hobbies" value="acting">acting
+    <br>
+    <br>
+    <input type="checkbox" name="hobbies" values="sports">sports
+    <br>
+    <br>
+
+    <label>country: </label>
+    <select>
+        <option value="india">india</option>
+        <option value="usa">usa</option>
+        <option value="switzerland">switzerland</option>
+        <option value="finland">finland</option>
+    </select>
+
+    <button onclick="validateform()">submit</button>
+   
+   <script>
+      function validateform(){
+         let x = document.forms["student"]["fnm"].value;
+         if(x == ""){
+            alert("firstname must be filled out");
+            return false;
+
+         }
+         let y = document.forms["student"]["snm"].value;
+         if(y==""){
+            alert("surname must be entered");
+            return false;
+         }
+
+         let z = document.forms["student"]["pnm"].value;
+         num = z.length;
+        
+         if(z==""){
+            alert("enter your phone number");
+            return false;
+         }
+         if(!/^\d{10}$/.test(z)){
+            alert("enter correct phone number");
+            return false;
+         }
+         
+      }
+    </script>
+
+
+</form>
+ </body>
+ </html>

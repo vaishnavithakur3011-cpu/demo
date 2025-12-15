@@ -1,0 +1,36 @@
+<!--controller and directive ex ang js-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+    <div ng-app="myapp" ng-controller="ctrl">
+        <di></di>
+        <p>enter first name:   <input type="text" ng-model="fn"> </p>
+        <p>enter second name:    <input type="text" ng-model="sn"> </p>
+        <br>
+        <br>
+         {{fn}}  {{sn|uppercase}}</p>
+    </div>
+    <script>
+        var m = angular.module("myapp",[]);
+        m.directive("di",function(){
+            return{
+                template: "<h1>DETAILS</h1>"
+            }
+        });
+
+        m.controller("ctrl",function($scope){
+            $scope.fn = "maya";
+            $scope.sn  = "angelou";
+        })
+
+    </script>
+
+    
+</body>
+</html>

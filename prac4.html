@@ -1,0 +1,29 @@
+<!-- check palindrome or not-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div id="demo">enter: </div>
+    <input type="text" id="demo1" placeholder="enter here">
+    <button onclick="checkp()">click here</button>
+    <div id="res"></div>
+    <script>
+        function checkp(){
+            let a = String(document.getElementById("demo1").value);
+            let cs = a.toLowerCase();
+            let rs = cs.split('').reverse().join('');
+
+            if(cs === rs){
+                document.getElementById("res").innerText="is palindrome";
+            }
+            else{
+               document.getElementById("res").innerText="isnt palindrome"; 
+            }
+        }
+    </script>
+ </body>
+ </html>

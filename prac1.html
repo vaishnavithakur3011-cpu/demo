@@ -1,0 +1,25 @@
+<!--code to display current date and time-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display current time</title>
+</head>
+<body>
+    <h2 id = "demo">time</h2>
+    <button onclick="showtime()">click here</button>
+    <script>
+        function showtime(){
+            const date = new Date();
+            const hr = date.getHours();
+           const min = date.getMinutes();
+          const sec = date.getSeconds();
+
+            document.getElementById("demo").innerHTML = `current time: ${hr}:${min}:${sec}`;
+        }
+        setInterval(showtime,1000)
+    </script>
+    
+</body>
+</html>
